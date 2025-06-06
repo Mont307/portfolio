@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Oscara Piastriego - zawodnika Formuły 1. Biografia, osiągnięcia, galeria, kontakt.">
+    <title>Oscar Piastri - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FF7F00; /* Pomarańczowy kolor McLaren */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            width: 100px;
+            height: auto;
+        }
+        header img.left {
+            left: 20px;
+        }
+        header img.right {
+            right: 20px;
+        }
+        nav {
+            background-color: #000000; /* Czarny kolor McLaren */
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333333; /* Ciemniejszy kolor przy najechaniu */
+            color: black;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .bio, .achievements, .media {
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .contact-info {
+            background-color: #000000; /* Czarny kolor McLaren */
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #FF7F00; /* Pomarańczowy kolor McLaren */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="mclaren_logo.png" alt="McLaren Logo" class="left">
+    <h1>Oscar Piastri</h1>
+    <p>Kierowca Formuły 1 – McLaren</p>
+    <img src="oscar_piastri_photo.jpg" alt="Oscar Piastri" class="right">
+</header>
+
+<nav>
+    <a href="#bio">Biografia</a>
+    <a href="#achievements">Osiągnięcia</a>
+    <a href="#media">Media</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="bio">
+    <h2>Biografia</h2>
+    <p>Oscar Piastri, urodzony 6 kwietnia 2001 roku w Melbourne, Australia, to jeden z najbardziej obiecujących młodych kierowców Formuły 1. Po zdobyciu mistrzostwa w serii Formuły 2 w 2021 roku, Piastri zadebiutował w F1 w 2022 roku jako kierowca zespołu McLaren.</p>
+    <p>Piastri rozpoczął swoją karierę wyścigową od kartingu, a jego talent szybko został dostrzegiony. Przed F1 wygrał Mistrzostwa Formuły 3 i Formuły 2, a jego sukcesy w tych seriach przyciągnęły uwagę wielkich zespołów w Formule 1. Jego przejście do McLarena w 2023 roku dało mu szansę na rywalizację z najlepszymi na świecie.</p>
+</section>
+
+<section id="achievements">
+    <h2>Osiągnięcia</h2>
+    <ul>
+        <li><strong>Mistrz Formuły 2:</strong> 2021 – Zwycięzca Mistrzostw Formuły 2</li>
+        <li><strong>Debiut w F1:</strong> 2023 – McLaren</li>
+        <li><strong>Wicemistrz Formuły 3:</strong> 2020 – Znakomite występy w serii F3</li>
+        <li><strong>Wygrał Mistrzostwa Formuły Renault:</strong> 2019 – Piękny początek kariery w wyścigach</li>
+    </ul>
+</section>
+
+<section id="media">
+    <h2>Media</h2>
+    <p>Oscar Piastri, mimo swojego młodego wieku, zdobył dużą popularność w mediach społecznościowych. Jego występy w wyścigach oraz wywiady cieszą się dużym zainteresowaniem. Poniżej znajduje się jedno z jego wideo, które pokazuje kulisy jego kariery w Formule 1.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VHD2TXF5qgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<section id="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery">
+        <img src="oscar_piastri_1.jpg" alt="Oscar Piastri 1">
+        <img src="oscar_piastri_2.jpg" alt="Oscar Piastri 2">
+        <img src="oscar_piastri_3.jpg" alt="Oscar Piastri 3">
+        <img src="oscar_piastri_4.jpg" alt="Oscar Piastri 4">
+    </div>
+</section>
+
+<section id="contact" class="contact-info">
+    <h2>Kontakt</h2>
+    <p>Jeśli chcesz skontaktować się z Oscarem Piastrim, odwiedź jego oficjalne strony w mediach społecznościowych:</p>
+    <p>Instagram: <a href="https://www.instagram.com/oscarpiastri" target="_blank" style="color: white;">@oscarpiastri</a></p>
+    <p>Twitter: <a href="https://twitter.com/oscarpiastri" target="_blank" style="color: white;">@oscarpiastri</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Oscar Piastri – Wszystkie prawa zastrzeżone.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Lewisa Hamiltona - zawodnika Formuły 1. Biografia, osiągnięcia, galeria, kontakt.">
+    <title>Lewis Hamilton - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #212121; /* Ciemny kolor Mercedes */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            width: 100px;
+            height: auto;
+        }
+        header img.left {
+            left: 20px;
+        }
+        header img.right {
+            right: 20px;
+        }
+        nav {
+            background-color: #00D2BE; /* Zielony kolor Mercedes */
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333333; /* Ciemniejszy kolor przy najechaniu */
+            color: black;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .bio, .achievements, .media {
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .contact-info {
+            background-color: #212121; /* Ciemny kolor Mercedes */
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #00D2BE; /* Zielony kolor Mercedes */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="mercedes_logo.png" alt="Mercedes Logo" class="left">
+    <h1>Lewis Hamilton</h1>
+    <p>Kierowca Formuły 1 – Mercedes-AMG Petronas Formula One Team</p>
+    <img src="lewis_hamilton_photo.jpg" alt="Lewis Hamilton" class="right">
+</header>
+
+<nav>
+    <a href="#bio">Biografia</a>
+    <a href="#achievements">Osiągnięcia</a>
+    <a href="#media">Media</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="bio">
+    <h2>Biografia</h2>
+    <p>Lewis Hamilton, urodzony 7 stycznia 1985 roku w Stevenage, Wielka Brytania, to jeden z najlepszych kierowców w historii Formuły 1. Zadebiutował w 2007 roku w zespole McLaren, a od 2013 roku reprezentuje Mercedes-AMG Petronas Formula One Team. Hamilton jest wielokrotnym mistrzem świata i jednym z najbardziej utytułowanych kierowców w historii F1.</p>
+    <p>Jego umiejętności na torze, strategia wyścigowa i rekordy, w tym wyrównanie rekordów Michaela Schumachera, sprawiają, że jest jednym z najlepszych sportowców w historii. Poza wyścigami, Hamilton angażuje się w liczne inicjatywy charytatywne, a także promuje równość i walkę ze zmianami klimatycznymi.</p>
+</section>
+
+<section id="achievements">
+    <h2>Osiągnięcia</h2>
+    <ul>
+        <li><strong>Debiut w F1:</strong> 2007 – McLaren</li>
+        <li><strong>Pierwsze zwycięstwo:</strong> GP Kanady 2007 – Pierwsze zwycięstwo w swoim debiutanckim sezonie</li>
+        <li><strong>Wielokrotny mistrz:</strong> 7 tytuli mistrza świata F1 (2008, 2014, 2015, 2017, 2018, 2019, 2020)</li>
+        <li><strong>Rekordy:</strong> Najwięcej pole positions, najwięcej zwycięstw na różnych torach, równość z Michaelem Schumacherm</li>
+    </ul>
+</section>
+
+<section id="media">
+    <h2>Media</h2>
+    <p>Lewis Hamilton jest obecny w mediach społecznościowych, a jego wywiady, akcje charytatywne i postawa poza torami przyciągają dużą uwagę. Poniżej znajduje się jedno z jego wideo z wystąpienia publicznego.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9A2Uj3b-4lI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<section id="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery">
+        <img src="lewis_hamilton_1.jpg" alt="Lewis Hamilton 1">
+        <img src="lewis_hamilton_2.jpg" alt="Lewis Hamilton 2">
+        <img src="lewis_hamilton_3.jpg" alt="Lewis Hamilton 3">
+        <img src="lewis_hamilton_4.jpg" alt="Lewis Hamilton 4">
+    </div>
+</section>
+
+<section id="contact" class="contact-info">
+    <h2>Kontakt</h2>
+    <p>Jeśli chcesz skontaktować się z Lewisem Hamiltonem, odwiedź jego oficjalne strony w mediach społecznościowych lub skontaktuj się z jego menedżerem:</p>
+    <p>Instagram: <a href="https://www.instagram.com/lewishamilton" target="_blank" style="color: white;">@lewishamilton</a></p>
+    <p>Twitter: <a href="https://twitter.com/LewisHamilton" target="_blank" style="color: white;">@LewisHamilton</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Lewis Hamilton – Wszystkie prawa zastrzeżone.</p>
+</footer>
+</body>
+</html>

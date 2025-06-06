@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kierowcy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #000;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 1% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 1% 50%; }
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #ff0000, #cc0000);
+            color: white;
+            font-weight: bold;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .btn-light {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        .btn-light:hover {
+            background-color: #cc0000;
+        }
+
+        h1 {
+            color: #ff0000;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            width: 30%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Formuła 1</a>
+        <span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="glowna.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="kierowcy.html">Kierowcy</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search" oninput="searchTeamsAndDrivers()">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Wyszukaj kierowców i zespoły" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="image-container justify-content-center">
+    <a href="#" id="f1Link">
+        <img src="F1.jpg" class="rounded img-fluid" alt="F1">
+    </a>
+</div>
+
+<div class="container py-5">
+    <div class="row g-4" id="teamsList">
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Charles Leclerc</div>
+                <div class="card-body">
+                    <p>Monakijczyk, znany ze swojej szybkości i precyzyjnej jazdy.</p>
+                    <a href="leclerc.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Carlos Sainz</div>
+                <div class="card-body">
+                    <p>Hiszpański kierowca wyścigowy, który zadebiutował w Formule 1 w 2015 roku, a od 2021 roku ściga się dla Ferrari, gdzie w 2022 roku odniósł swoje pierwsze zwycięstwo podczas Grand Prix Wielkiej Brytanii.</p>
+                    <a href="Sainz.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Max Verstppen</div>
+                <div class="card-body">
+                    <p>Holenderski kierowca wyścigowy, czterokrotny mistrz świata Formuły 1.</p>
+                    <a href="Verstappen.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Sergio"Checo"Perez</div>
+                <div class="card-body">
+                    <p>Weteran wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2011.</p>
+                    <a href="Perez.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Lewis Hamilton</div>
+                <div class="card-body">
+                    <p>kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2007. Od sezonu 2025 kierowca zespołu Scuderia Ferrari, siedmiokrotny mistrz świata Formuły 1</p>
+                    <a href="Hamilton.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">George Russel</div>
+                <div class="card-body">
+                    <p>Brytyjczyk znany z prinnces mood zwycięstwo w wyścigu w Sao Paulo w 2022 i w Austrii oraz w Las Vegas w 2024</p>
+                    <a href="Russel.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Lando Norris</div>
+                <div class="card-body">
+                    <p>brytyjski kierowca wyścigowy pochodzenia belgijskiego, startujący w mistrzostwach świata Formuły 1 od sezonu 2019, kierowca zespołu McLaren i zwycięzca czterech wyścigów Formuły 1.</p>
+                    <a href="Norris.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Oscar Piastri</div>
+                <div class="card-body">
+                    <p>australijski kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2023 w zespole McLaren.</p>
+                    <a href="Piastri.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Fernando Alonso</div>
+                <div class="card-body">
+                    <p> Hiszpański mistrz świata F1 (2005, 2006), znany z doświadczenia i wytrwałości.</p>
+                    <a href="Alonso.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Lance Stroll</div>
+                <div class="card-body">
+                    <p>Kanadyjski kierowca, startujący w F1 od 2017 roku.</p>
+                    <a href="Stroll.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Esteban Ocon</div>
+                <div class="card-body">
+                    <p>Francuski kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2016. Od sezonu 2021 kierowca zespołu Alpine.</p>
+                    <a href="Ocon.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Pierre Gasly</div>
+                <div class="card-body">
+                    <p>Francuski kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2017.</p>
+                    <a href="Gasly.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Kevin Magnussen</div>
+                <div class="card-body">
+                    <p>duński kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2014.</p>
+                    <a href="Magnussen.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Nico Hülkenberg</div>
+                <div class="card-body">
+                    <p> niemiecki kierowca wyścigowy, który startuje w barwach zespołu Haas w Formule 1. Zwycięzca 24-godzinnego wyścigu Le Mans 2015.</p>
+                    <a href="Hulkenberg.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Yūki Tsunoda</div>
+                <div class="card-body">
+                    <p>Japoński kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2021, kierowca zespołu Racing Bulls.</p>
+                    <a href="Tsunoda.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Daniel Riccaardo</div>
+                <div class="card-body">
+                    <p>Australijski kierowca wyścigowy, kierowca mistrzostw świata Formuły 1 w latach 2011-2024.</p>
+                    <a href="Riccardo.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Alexander Albon</div>
+                <div class="card-body">
+                    <p>Tajsko-brytyjski kierowca wyścigowy, który zadebiutował w Formule 1 w 2019 roku, a od 2022 roku jeździ dla zespołu Williams, zdobywając uznanie za swoje solidne wyniki i umiejętność wyciągania maksimum z samochodu.</p>
+                    <a href="Albon.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Logan Sargeant</div>
+                <div class="card-body">
+                    <p>Amerykański kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2023 do Grand Prix Holandii 2024 w zespole Williams Racing.</p>
+                    <a href="Sargent.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Zhou Guanyu</div>
+                <div class="card-body">
+                    <p>Chiński kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2022, kierowca zespołu Alfa Romeo F1 Team Stake.</p>
+                    <a href="Zhou.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Valterri Botass</div>
+                <div class="card-body">
+                    <p>Fiński kierowca wyścigowy, startujący w Formule 1. Dwukrotny wicemistrz tej serii w sezonach 2019 i 2020, a także drugi wicemistrz w sezonach 2017 i 2021.</p>
+                    <a href="Bottas.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exitModalLabel">Potwierdzenie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Czy na pewno chcesz opuścić tę stronę?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                <a href="https://www.formula1.com/" id="confirmExit" class="btn btn-danger">Tak, wyjdź</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <a href="glowna.html" class="btn btn-danger">Powrót do strony głównej</a>
+    </div>
+</div>
+
+<script>
+    function searchTeamsAndDrivers() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let teams = document.getElementsByClassName("team-card");
+
+
+        let searchButton = document.getElementById("searchButton");
+        if (input.trim() !== "") {
+            searchButton.style.display = "none";
+        } else {
+            searchButton.style.display = "block";
+        }
+
+        for (let i = 0; i < teams.length; i++) {
+            let teamName = teams[i].getElementsByClassName("card-header")[0].textContent.toLowerCase();
+            if (teamName.indexOf(input) > -1) {
+                teams[i].style.display = "";
+            } else {
+                teams[i].style.display = "none";
+            }
+        }
+    }
+
+
+    document.getElementById('f1Link').addEventListener('click', function(event) {
+        event.preventDefault();
+        var exitModal = new bootstrap.Modal(document.getElementById('exitModal'));
+        exitModal.show();
+        document.getElementById('confirmExit').addEventListener('click', function() {
+            window.location.href = "https://www.formula1.com/";
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuła 1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #000;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 1% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 1% 50%; }
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #ff0000, #cc0000);
+            color: white;
+            font-weight: bold;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .btn-light {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        .btn-light:hover {
+            background-color: #cc0000;
+        }
+
+        h1 {
+            color: #ff0000;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            width: 30%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Formuła 1</a>
+        <span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="glowna.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kierowcy.html">Kierowcy</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search" oninput="searchTeamsAndDrivers()">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Wyszukaj kierowców i zespoły" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="image-container justify-content-center">
+    <a href="#" id="f1Link">
+        <img src="F1.jpg" class="rounded img-fluid" alt="F1">
+    </a>
+</div>
+
+<div class="container py-5">
+    <div class="row g-4" id="teamsList">
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Scuderia Ferrari</div>
+                <div class="card-body">
+                    <p>Najstarszy i najbardziej utytułowany zespół w historii F1...</p>
+                    <a href="FERRARI.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Mercedes AMG Petronas</div>
+                <div class="card-body">
+                    <p>Jeden z dominujących zespołów ostatnich lat...</p>
+                    <a href="MERCEDES.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Red Bull Racing</div>
+                <div class="card-body">
+                    <p>Zespół zdobywający kolejne mistrzostwa...</p>
+                    <a href="REDBULL.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">McLaren F1 Team</div>
+                <div class="card-body">
+                    <p>Jak wrócić na szczyt...</p>
+                    <a href="MCLAREN.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Aston Martin F1 Team</div>
+                <div class="card-body">
+                    <p>Czy finanse dadzą mistrzostwo?</p>
+                    <a href="ASTONMARTIN.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">BWT Alpine F1 Team</div>
+                <div class="card-body">
+                    <p>Francuski zespół o dużych ambicjach...</p>
+                    <a href="ALPINE.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Williams Racing</div>
+                <div class="card-body">
+                    <p>Upadek Feniksa...</p>
+                    <a href="WILLIAMS.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">RB</div>
+                <div class="card-body">
+                    <p>Mlodsza siostra Redbulla </p>
+                    <a href="RB.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Haas F1 Team</div>
+                <div class="card-body">
+                    <p>Amerykańska ekipa na torze...</p>
+                    <a href="HAAS.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">11 ekipa??</div>
+                <div class="card-body">
+                    <p>Czy zespoły dostana w prezecie niespodzianke </p>
+                    <a href="11.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Kick Sauber F1 Team</div>
+                <div class="card-body">
+                    <p>Jak byc ostatnim...</p>
+                    <a href="SAUBER.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 team-card">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-header">Kto był Mistrzem w tym roku</div>
+                <div class="card-body">
+                    <p>Mistrzowie 2024</p>
+                    <a href="Mistrzowie.html" class="btn btn-light mt-auto">Więcej</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exitModalLabel">Potwierdzenie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Czy na pewno chcesz opuścić tę stronę?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                <a href="https://www.formula1.com/" id="confirmExit" class="btn btn-danger">Tak, wyjdź</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <a href="glowna.html" class="btn btn-danger">Powrót do strony głównej</a>
+    </div>
+</div>
+
+<script>
+    function searchTeamsAndDrivers() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let teams = document.getElementsByClassName("team-card");
+
+
+        let searchButton = document.getElementById("searchButton");
+        if (input.trim() !== "") {
+            searchButton.style.display = "none";
+        } else {
+            searchButton.style.display = "block";
+        }
+
+        for (let i = 0; i < teams.length; i++) {
+            let teamName = teams[i].getElementsByClassName("card-header")[0].textContent.toLowerCase();
+            if (teamName.indexOf(input) > -1) {
+                teams[i].style.display = "";
+            } else {
+                teams[i].style.display = "none";
+            }
+        }
+    }
+
+
+    document.getElementById('f1Link').addEventListener('click', function(event) {
+        event.preventDefault();
+        var exitModal = new bootstrap.Modal(document.getElementById('exitModal'));
+        exitModal.show();
+        document.getElementById('confirmExit').addEventListener('click', function() {
+            window.location.href = "https://www.formula1.com/";
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

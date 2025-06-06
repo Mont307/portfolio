@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redbull</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1E2A47; /* Granatowy kolor tła */
+            color: #F2F2F2; /* Jasny tekst dla kontrastu */
+        }
+
+        h1 {
+            color: #FF5733; /* Czerwony kolor dla nagłówka */
+        }
+
+        .bg-secondary {
+            background-color: #2A3A59; /* Granatowe tło dla sekcji */
+        }
+
+        .btn-warning {
+            background-color: #FF5733; /* Pomarańczowy dla przycisków */
+            border-color: #FF5733; /* Granatowa obwódka przycisku */
+        }
+
+        .btn-warning:hover {
+            background-color: #F14E2E; /* Ciemniejszy pomarańczowy po najechaniu */
+            border-color: #F14E2E;
+        }
+
+        .text-warning {
+            color: #FF5733 !important; /* Pomarańczowy dla tekstu */
+        }
+
+        .container {
+            background-color: #1E2A47; /* Granatowe tło całej zawartości */
+            border-radius: 10px;
+        }
+
+        a {
+            color: #FF5733; /* Pomarańczowy kolor dla linków */
+        }
+
+        a:hover {
+            color: #F14E2E; /* Ciemniejszy pomarańczowy po najechaniu na link */
+        }
+
+        .collapse {
+            background-color: #2A3A59; /* Granatowe tło rozwijanych sekcji */
+            color: #F2F2F2;
+        }
+
+        .img-fluid {
+            border: 3px solid #FF5733; /* Pomarańczowa obwódka wokół obrazów */
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Formuła 1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="glowna.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+</head>
+
+<body>
+
+<div class="image-container d-flex justify-content-center align-items-center" style="height: 30vh;">
+    <a href="https://www.formula1.com/">
+        <img src="F1.jpg" class="rounded img-fluid" alt="F1">
+    </a>
+</div>
+<div class="container py-5">
+    <h1 class="text-center">Redbull</h1>
+
+    <div class="row mb-4">
+        <div class="col-md-12 bg-secondary rounded text-center">
+            <h3 class="text-warning">Historia Zespołu</h3>
+            <button class="btn btn-warning mb-2" data-bs-toggle="collapse" data-bs-target="#historia">Rozwiń</button>
+            <div id="historia" class="collapse">
+                <p>Red Bull Racing został założony w 2004 roku po przejęciu zespołu Jaguar Racing przez austriacką firmę Red Bull GmbH. Od tego czasu zespół stał się jednym z najbardziej dominujących w historii F1, zdobywając liczne tytuły mistrzowskie i stając się symbolem innowacji oraz agresywnej strategii wyścigowej.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 bg-secondary rounded text-center">
+            <h3 class="text-warning">Sukcesy</h3>
+            <button class="btn btn-warning mb-2" data-bs-toggle="collapse" data-bs-target="#sukcesy">Rozwiń</button>
+            <div id="sukcesy" class="collapse">
+                <p>Od 2010 roku Red Bull Racing zdobył wiele mistrzostw świata, zarówno w klasyfikacji konstruktorów, jak i kierowców. Czterokrotna dominacja Sebastiana Vettela (2010-2013) oraz sukcesy Maxa Verstappena od 2021 roku umocniły ich pozycję jako jednej z najlepszych ekip w historii F1</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 bg-secondary rounded text-center">
+            <h3 class="text-warning">Pochodzenie</h3>
+            <button class="btn btn-warning mb-2" data-bs-toggle="collapse" data-bs-target="#pochodzenie">Rozwiń</button>
+            <div id="pochodzenie" class="collapse">
+                <p>Milton Keynes-Wielka brytania</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 p-4 bg-secondary rounded text-center">
+            <h3 class="text-warning">Silnik i Technologia</h3>
+            <button class="btn btn-warning mb-2" data-bs-toggle="collapse" data-bs-target="#silnik">Rozwiń</button>
+            <div id="silnik" class="collapse">
+                <p>Red Bull Racing w 2025 roku korzysta z jednostek napędowych Red Bull Powertrains, rozwijanych we współpracy z Fordem. Zespół słynie z innowacyjnych rozwiązań aerodynamiki i strategii wyścigowych</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-12 p-4 bg-secondary rounded text-center">
+            <h3 class="text-warning">RB19</h3>
+            <p>Bolid Haasa na rok 2023</p>
+            <img src="RB19.jpg" class="rounded img-fluid" alt="RB-19">
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 bg-secondary rounded text-center">
+            <h3 class="text-warning">Kierowcy</h3>
+            <button class="btn btn-warning mb-2" data-bs-toggle="collapse" data-bs-target="#kierowcy">Rozwiń</button>
+            <div id="kierowcy" class="collapse">
+                <p><strong>Max Verstappen</strong> Holenderski kierowca wyścigowy, czterokrotny mistrz świata Formuły 1.</p>
+                <p><strong>Sergio Pérez</strong> Meksykański kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od sezonu 2011.</p>
+                <p><strong>Liam Lawson</strong> Nowozelandzki kierowca wyścigowy, startujący w mistrzostwach świata Formuły 1 od 13. rundy sezonu 2023 w zespole Scuderia AlphaTauri. </p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col p-4 bg-secondary rounded text-center">
+            <h3 class="text-warning">Pozostałe Zespoły</h3>
+            <ul class="list-unstyled">
+                <li><a href="FERRARI.html" class="text-light">Scuderia Ferrari</a></li>
+                <li><a href="MERCEDES.html" class="text-light">Mercedes AMG Petronas</a></li>
+                <li><a href="MCLAREN.html" class="text-light">McLaren F1 Team</a></li>
+                <li><a href="ASTONMARTIN.html" class="text-light">Aston Martin F1 Team</a></li>
+                <li><a href="RB.html" class="text-light">Visa Cash App RB</a></li>
+                <li><a href="HAAS.html" class="text-light">Haas F1 Team</a></li>
+                <li><a href="WILLIAMS.html" class="text-light">Williams Racing</a></li>
+                <li><a href="ALPINE.html" class="text-light">BWT Alpine F1 Team</a></li>
+                <li><a href="SAUBER.html" class="text-light">Stake F1 Team Kick Sauber</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <a href="glowna.html" class="btn btn-danger">Powrót do strony głównej</a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
